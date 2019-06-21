@@ -1,164 +1,141 @@
-<!DOCTYPE html>
-<html lang='en'>
 
-<head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <script src='https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js'></script>
-    <script src='https://unpkg.com/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js'></script>
-    <link rel="stylesheet" type="text/css" href="./w3b-style.css">
-    </style>
-    <title>W3b WC Button Demo</title>
-</head>
+![W3bButtons](./w3bbutton.png)
+# W3bButton
+[https://webwizart.github.io/w3bblocks/](https://webwizart.github.io/w3bblocks/)
 
-<body>
-    <h1>W3b-wc-button</h1>
-    <hr>
-    A Web Components Button
-    <p>Make sure to add the following Pollyfills to your application:</p>
-    <code>
-        &ltscript src='https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js'&gt&lt/script&gt
-        &ltscript src='https://unpkg.com/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js'&gt&lt/script&gt  
-    </code>
-    <hr>
-    <div>
-        <h3>Text Buttons</h3>
-        <w3b-wc-button size="small" label="button" theme="primary"></w3b-wc-button>
-        <w3b-wc-button size="medium" label="button" theme="primary"></w3b-wc-button>
-        <w3b-wc-button size="large" label="button" theme="primary"></w3b-wc-button>
-        <w3b-wc-button size="large" label="button" theme="primary" disabled></w3b-wc-button>
-    </div>
-    <div>
-        <w3b-wc-button size="small" label="button" theme="secondary"></w3b-wc-button>
-        <w3b-wc-button size="medium" label="button" theme="secondary"></w3b-wc-button>
-        <w3b-wc-button size="large" label="button" theme="secondary"></w3b-wc-button>
-        <w3b-wc-button size="large" label="button" theme="secondary" disabled></w3b-wc-button>
-    </div>
-    <code>
-        example:
-        &ltw3b-wc-button size="small" label="button" theme="secondary">&lt/w3b-wc-button&gt
-    </code>
-    <div>
-        <hr>
-        <h3>Icon Buttons</h3>
-        <w3b-wc-button size="medium" label="Button with icon" theme="primary">
-            <span slot="icon-right">
-                <img src="./icon.png" />
-            </span>
-        </w3b-wc-button>
-        <w3b-wc-button size="medium" label="Button with icon" theme="primary">
-            <span slot="icon-left">
-                <img src="./icon.png" />
-            </span>
-        </w3b-wc-button>
-        <w3b-wc-button size="small" label="" theme="primary">
-            <span slot="icon-right">
-                <img src="./icon.png" />
-            </span>
-        </w3b-wc-button><br>
-        <w3b-wc-button size="medium" label="Button with icon" theme="secondary">
-            <span slot="icon-right">
-                <img src="./icon.png" />
-            </span>
-        </w3b-wc-button>
-        <w3b-wc-button size="medium" label="Button with icon" theme="secondary">
-            <span slot="icon-left">
-                <img src="./icon.png" />
-            </span>
-        </w3b-wc-button>
-        <w3b-wc-button size="small" label="" theme="secondary">
-            <span slot="icon-right">
-                <img src="./icon.png" />
-            </span>
-        </w3b-wc-button>
-    </div>
-    <code>
-        example:
-        &ltw3b-wc-button 
-            size="small" 
-            label="" 
-            theme="secondary"&gt
-                &lt span slot="icon-right"&gt
-                &ltimg src="./icon.png" /&gt
-                &lt/span&gt
-        &lt/w3b-wc-button&gt
-    </code>
-    <hr>
-    <div>
-        <h3>Danger Button</h3>
-        <w3b-wc-button size="medium" label="Delete" theme="danger"></w3b-wc-button>
-        <w3b-wc-button size="medium" label="Delete" theme="danger" disabled></w3b-wc-button>
-    </div>
-    <code>
-        example:
-        &ltw3b-wc-button size="medium" label="Delete" theme="danger" disabled&gt&lt/w3b-wc-button&gt
-    </code>
-    <hr>
-    <section>
-        <h3>CSS Variables</h3>
-        <ul>
-            <li>--w3b-fontsize-small:</li>
-            <li>--w3b-fontsize-medium:</li>
-            <li>--w3b-fontsize-large:</li>
-            <li>--w3b-opacity:</li>
-            <li>--w3b-icon-position:</li>
-            <li>--w3b-primary-color:</li>
-            <li>--w3b-primary-background-color:</li>
-            <li>--w3b-primary-border:</li>
-            <li>--w3b-secondary-color:</li>
-            <li>--w3b-secondary-background-color:</li>
-            <li>--w3b-secondary-border:</li>
-            <li>--w3b-danger-color:</li>
-            <li>--w3b-danger-background-color:</li>
-            <li>--w3b-danger-border:</li>
-        </ul>
-        <hr>
-    </section>
-    <section>
-        <h3>Attributes</h3>
-        <ul>
-            <li>disabled: Boolean </li>
-            <li>label: String</li>
-            <li>theme: String - primary, secundary, danger</li>
-            <li>size: String - small, medium, large</li>
-        </ul>
-        <hr>
-    </section>
-    <section>
-        <h3>Event</h3>
-        You can listen to the <b><i>w3bbuttonclick</i></b> event:
-        <br><br>
-        <code>
-            window.addEventListener('w3bbuttonclick', function (event) {
-                console.log(event.detail);
-            }, true);
-        </code>       
-        <h5>Console result:</h5>
-        <code>
-            {isClicked: w3b-wc-button.danger}
-            {isClicked: w3b-wc-button.create}
-        </code>
-        <hr>
-    </section>
-    <section>
-        <h3>Example</h3>
-        <p>Tile example with Cancel and Create buttons</p>
-        <div class="tile">
-            <p>Tile example with Cancel and Create buttons
-                Some text goes here Some text goes here Some
-                text goes here
-            </p>
-            <w3b-wc-button class="create" size="medium" label="Create" theme="primary"></w3b-wc-button>
-            <w3b-wc-button class="danger" size="medium" label="Cancel" theme="danger"></w3b-wc-button>
-        </div>
-    </section>
-    <script src='./lib/index.js' type='module'></script>
-    <script>
-        window.addEventListener('w3bbuttonclick', function (event) {
-            console.log('w3bbuttonclick-event.detail', event.detail);
-        }, true);
-    </script>
-</body>
+<!-- vscode-markdown-toc -->
+* 1. [General guidance](#Generalguidance)
+* 2. [Variations](#Variations)
+* 3. [Labels](#Labels)
+* 4. [Icons](#Icons)
+* 5. [Danger Button](#DangerButton)
+* 6. [Properties](#Properties)
+* 7. [Examples](#Examples)
+* 8. [Getting Started](#GettingStarted)
+	* 8.1. [Install dependencies](#Installdependencies)
+	* 8.2. [Start](#Start)
+	* 8.3. [Build](#Build)
+	* 8.4. [Test](#Test)
+	* 8.5. [Coverage](#Coverage)
 
-</html>
+<!-- vscode-markdown-toc-config
+	numbering=false
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+# Usage
+##  1. <a name='Generalguidance'></a>General guidance
+Buttons express what action will occur when the user clicks or touches it. Buttons are used to initialize an action, either in the background or foreground of an experience.
+
+Buttons are used primarily on action items. Some examples include Add, Save, Delete, and Sign up. Each page can have one or two primary buttons. Any remaining calls-to-action should be represented as secondary buttons.
+
+Do not use buttons as navigational elements. Instead, use links when the desired action is to take the user to a new page.
+
+##  2. <a name='Variations'></a>Variations
+- Primary -	For the principal call to action on the page.
+- Secondary -	For secondary actions on each page.
+- Button with icon -	When words are not enough, icons can be used in buttons to better communicate what the button does. Icons are always paired with text.
+- Disabled button -	Use when the user cannot proceed until an input is collected.
+- Danger button -	When an action has potentially destructive effects on the user’s data (delete, remove, etc).
+
+##  3. <a name='Labels'></a>Labels
+Button labels should clearly indicate the action of the button. Use active verbs, such as Add or Delete. Use sentence-style capitalization (only the first word in a phrase and any proper nouns capitalized) and no more than three words for button labels.
+
+For sets of buttons, use specific labels, such as Save or Discard, instead of using OK and Cancel. This is particularly helpful when the user is confirming an action.
+
+##  4. <a name='Icons'></a>Icons
+- Use icons (16px) within buttons.
+- Wrap icons with `<w3b-wc-button >`
+- Icons should always appear to the right of the text.
+- Icons used in buttons must be directly related to the action that the user is taking.
+- Icons must be the same color value as the text within a button.
+
+##  5. <a name='DangerButton'></a>Danger Button
+Danger buttons have a different visual style to inform users of potentially destructive actions they are about to take. If using the danger button as a standalone, we recommend styling it as a secondary button. Within a set, the danger button should be styled as a primary button.
+
+# Style 
+<li>--w3b-fontsize-small:</li>
+<li>--w3b-fontsize-medium:</li>
+<li>--w3b-fontsize-large:</li>
+<li>--w3b-opacity:</li>
+<li>--w3b-icon-position:</li>
+<li>--w3b-primary-color:</li>
+<li>--w3b-primary-background-color:</li>
+<li>--w3b-primary-border:</li>
+<li>--w3b-secondary-color:</li>
+<li>--w3b-secondary-background-color:</li>
+<li>--w3b-secondary-border:</li>
+<li>--w3b-danger-color:</li>
+<li>--w3b-danger-background-color:</li>
+<li>--w3b-danger-border:</li>
+
+# Code
+##  6. <a name='Properties'></a>Properties
+The **w3b-wc-button** component extends from **HTMLElement** and has most of the native properties. 
+
+Custom attributes will be prefixed with `w3b`,  **w3b-style, w3b-theme, w3b-size**
+
+ - label - **string**: The text displayed on the button or button label
+ - disabled - **boolean**: the component is inactive
+ - theme - **string**: `primary/secondary/danger`
+ - size - **string**: `small/medium/large`
+ - You can listen to the w3bbuttonclick event: 
+    ```
+    window.addEventListener('w3bbuttonclick', function (event) { 
+        console.log(event.detail); }, true);
+    ```
+    Console result:
+    ```
+    {isClicked: w3b-wc-button.danger} {isClicked: w3b-wc-button.create}
+    ```
+##  7. <a name='Examples'></a>Examples
+Make a new Default W3bButton
+~~~ JavaScript
+<w3b-wc-button ></w3b-wc-button >
+~~~
+
+Make a new Configured W3bButton
+~~~ JavaScript
+<div>
+    <h3>Text Buttons</h3>
+    <w3b-wc-button size="large" label="button" theme="primary" disabled></w3b-wc-button>
+    <w3b-wc-button size="large" label="button" theme="secondary" disabled></w3b-wc-button>
+</div>
+
+~~~
+
+##  8. <a name='GettingStarted'></a>Getting Started
+
+###  8.1. <a name='Installdependencies'></a>Install dependencies
+
+```
+$ npm install
+```
+
+###  8.2. <a name='Start'></a>Start
+
+Run a webserver in the root directory 'http-server (node)' or 'SimpleHTTPServer (python)'
+
+###  8.3. <a name='Build'></a>Build
+
+gives you a build folder and a transpiled version of the butten with styling.
+tests and coverage are triggered first before build
+
+```
+$ npm run build
+```
+
+###  8.4. <a name='Test'></a>Test
+
+```
+$ npm run test
+```
+
+###  8.5. <a name='Coverage'></a>Coverage
+
+to get a coverage report in console and a website report
+
+```
+$ npm run coverage
+```
