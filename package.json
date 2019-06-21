@@ -1,0 +1,27 @@
+{
+  "name": "w3bblocks-wc-button",
+  "version": "1.0.0",
+  "description": "w3bblocks-wc-button",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "npx babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webwizart/w3bblocks-wc-button.git"
+  },
+  "author": "w3bwizart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webwizart/w3bblocks-wc-button/issues"
+  },
+  "homepage": "https://github.com/webwizart/w3bblocks-wc-button#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
+  }
+}

@@ -1,0 +1,37 @@
+w3b-wc-button {
+  --w3b-fontsize-small: 8px;
+  --w3b-fontsize-medium: 12px;
+  --w3b-fontsize-large: 18px;
+  --w3b-opacity: 0.5;
+  --w3b-icon-position: right;
+
+  --w3b-primary-color: #fff;
+  --w3b-primary-background-color: deeppink;
+  --w3b-primary-border: 1px solid #fff;
+
+  --w3b-secondary-color: green;
+  --w3b-secondary-background-color: transparent;
+  --w3b-secondary-border: 1px solid var(--w3b-secondary-color);
+
+  --w3b-danger-color: #fff;
+  --w3b-danger-background-color: red;
+  --w3b-danger-border: 1px solid #fff;
+}
+img {
+  height: 16px;
+}
+.tile {
+  position: relative;
+  display: block;
+  text-align: right;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 6px 6px 25px 2px rgba(0, 0, 0, 0.50);
+  -moz-box-shadow: 6px 6px 25px 2px rgba(0, 0, 0, 0.50);
+  box-shadow: 6px 6px 25px 2px rgba(0, 0, 0, 0.50);
+}
+.danger,
+.create {
+  position: relative;
+}

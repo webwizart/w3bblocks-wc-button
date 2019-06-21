@@ -29,6 +29,7 @@
         <w3b-wc-button size="large" label="button" theme="primary"></w3b-wc-button>
         <w3b-wc-button size="large" label="button" theme="primary" disabled></w3b-wc-button>
     </div>
+    <br>    
     <div>
         <w3b-wc-button size="small" label="button" theme="secondary"></w3b-wc-button>
         <w3b-wc-button size="medium" label="button" theme="secondary"></w3b-wc-button>
@@ -44,32 +45,33 @@
         <h3>Icon Buttons</h3>
         <w3b-wc-button size="medium" label="Button with icon" theme="primary">
             <span slot="icon-right">
-                <img src="./icon.png" />
+                <img src="./assets/icon.png" />
             </span>
         </w3b-wc-button>
-        <w3b-wc-button size="medium" label="Button with icon" theme="primary">
+        <w3b-wc-button size="medium" label="Button with icon" theme="primary" disabled>
             <span slot="icon-left">
-                <img src="./icon.png" />
+                <img src="./assets/icon.png" />
             </span>
         </w3b-wc-button>
         <w3b-wc-button size="small" label="" theme="primary">
             <span slot="icon-right">
-                <img src="./icon.png" />
+                <img src="./assets/icon.png" />
             </span>
-        </w3b-wc-button><br>
+        </w3b-wc-button><br><br>
+
         <w3b-wc-button size="medium" label="Button with icon" theme="secondary">
             <span slot="icon-right">
-                <img src="./icon.png" />
+                <img src="./assets/icon.png" />
             </span>
         </w3b-wc-button>
-        <w3b-wc-button size="medium" label="Button with icon" theme="secondary">
+        <w3b-wc-button size="medium" label="Button with icon" theme="secondary" disabled>
             <span slot="icon-left">
-                <img src="./icon.png" />
+                <img src="./assets/icon.png" />
             </span>
         </w3b-wc-button>
         <w3b-wc-button size="small" label="" theme="secondary">
             <span slot="icon-right">
-                <img src="./icon.png" />
+                <img src="./assets/icon.png" />
             </span>
         </w3b-wc-button>
     </div>
@@ -103,12 +105,15 @@
             <li>--w3b-fontsize-large:</li>
             <li>--w3b-opacity:</li>
             <li>--w3b-icon-position:</li>
+
             <li>--w3b-primary-color:</li>
             <li>--w3b-primary-background-color:</li>
             <li>--w3b-primary-border:</li>
+
             <li>--w3b-secondary-color:</li>
             <li>--w3b-secondary-background-color:</li>
             <li>--w3b-secondary-border:</li>
+
             <li>--w3b-danger-color:</li>
             <li>--w3b-danger-background-color:</li>
             <li>--w3b-danger-border:</li>
@@ -133,7 +138,8 @@
             window.addEventListener('w3bbuttonclick', function (event) {
                 console.log(event.detail);
             }, true);
-        </code>       
+        </code>
+        
         <h5>Console result:</h5>
         <code>
             {isClicked: w3b-wc-button.danger}
@@ -149,10 +155,11 @@
                 Some text goes here Some text goes here Some
                 text goes here
             </p>
-            <w3b-wc-button class="create" size="medium" label="Create" theme="primary"></w3b-wc-button>
+            <w3b-wc-button class="create" size="medium" label="Create" theme="secondary"></w3b-wc-button>
             <w3b-wc-button class="danger" size="medium" label="Cancel" theme="danger"></w3b-wc-button>
         </div>
     </section>
+
     <script src='./lib/index.js' type='module'></script>
     <script>
         window.addEventListener('w3bbuttonclick', function (event) {
