@@ -1,6 +1,8 @@
 
-![W3bButtons](./w3bbutton.png)
-# W3bButton
+![Text W3bBlocks-wc-button](./assets/screen1.png)
+![Icon W3bBlocks-wc-button](./assets/screen2.png)
+![Danger W3bBlocks-wc-button](./assets/screen3.png)
+# W3bBlocks-wc-button 
 [https://webwizart.github.io/w3bblocks/](https://webwizart.github.io/w3bblocks/)
 
 <!-- vscode-markdown-toc -->
@@ -74,8 +76,6 @@ Danger buttons have a different visual style to inform users of potentially dest
 ##  6. <a name='Properties'></a>Properties
 The **w3b-wc-button** component extends from **HTMLElement** and has most of the native properties. 
 
-Custom attributes will be prefixed with `w3b`,  **w3b-style, w3b-theme, w3b-size**
-
  - label - **string**: The text displayed on the button or button label
  - disabled - **boolean**: the component is inactive
  - theme - **string**: `primary/secondary/danger`
@@ -120,7 +120,7 @@ Run a webserver in the root directory 'http-server (node)' or 'SimpleHTTPServer 
 ###  8.3. <a name='Build'></a>Build
 
 gives you a build folder and a transpiled version of the butten with styling.
-tests and coverage are triggered first before build
+Check out the demo at index.html for more examples
 
 ```
 $ npm run build
